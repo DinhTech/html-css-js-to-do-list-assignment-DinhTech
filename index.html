@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>To-Do List | Dinh Thai</title>
+
+    <!-- Set the character set, so the browser knows which character set should be loaded and valid for this webpage. -->
+    <meta charset="UTF-8">
+
+    <!-- For modern responsive web development: -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta Data: -->
+    <meta name="description" content="To-Do List Dinh Thai.">
+    <meta name="author" content="Dinh Thai">
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+
+    <!-- Style(s): -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+    <!-- Script(s): -->
+    <!-- defer attribute will cause this script to wait until the body is loaded before executing (important for DOM / element manipulation by scripts) -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>To-Do App</h1>
+        <br />
+      </header>
+        <h2>To-Do Form</h2>
+         <label for="name">New Task:</label>
+        <div>
+          <input type="text">
+          <a href="#">Add To-Do</a>
+        </div>
+        <br />
+        <h3>Active To-Dos</h3>
+        <p id="error-output"></p>
+        <ul class="empty">
+        <li>None To-Do yet!</li>
+      </ul>
+        <br />
+        <h4>Completed To-Dos</h4>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,4 @@
 # html-css-js-to-do-list-assignment-DinhTech
-html-css-js-to-do-list-assignment-DinhTech created by GitHub Classroom
 
 Rubric
 

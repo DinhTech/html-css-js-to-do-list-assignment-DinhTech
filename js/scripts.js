@@ -21,13 +21,13 @@
             // If the input is empty.
             if (input.value.trim() === "")
             {
-                error.innerText = "Sorry, please ensure you enter an item before attempting to add it.";
+                error.innerText = "Please enter a To-Do item before attempting to add it.";
                 errors = true;
             }
             // If the input already exists.
             if (itemArray.includes(input.value.trim().toLowerCase()))
             {
-                error.innerText = "Sorry, please ensure that the item you have entered is not already on your list.";
+                error.innerText = "The To-Do item is already listed.";
                 errors = true;
             }
             

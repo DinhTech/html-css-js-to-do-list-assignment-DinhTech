@@ -1,3 +1,5 @@
+// Citation: line 3 to 78 are taken from James Grieve in class "js practice - Shopping List" example. Link: https://github.com/TECHCareers-by-Manpower/js-practice
+
 {
     console.log("Script starting!");
     // querySelector will use CSS selector syntax to select HTML elements.
@@ -60,7 +62,7 @@
 
                 }
                 // 3. Add the list item to the list.
-                list.appendChild(newListItem);
+                list.appendChild(newListItem, id="demo" );
                     
                 // 4. Clear the text input. 
                 input.value = "";

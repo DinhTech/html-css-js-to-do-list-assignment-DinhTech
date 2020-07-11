@@ -1,4 +1,4 @@
-// Citation: line 3 to 16, 27 to 71 and 80 to 87 are taken from James Grieve in class "js practice - Shopping List" example. 
+// Citation: line 3 to 16 and 27 to 79 are taken from James Grieve in class "js practice - Shopping List" example. 
 // Link: https://github.com/TECHCareers-by-Manpower/js-practice
 {
     console.log("Script starting!");
@@ -69,14 +69,6 @@
                     // have the "no items" li.
                     list.children[0].remove();
                 }
-
-                // Add checkbox to Active To-Dos item.
-                // Citation: w3schools.com
-                // Link: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_create
-                checkbox = document.createElement("input");
-                checkbox.setAttribute("type", "checkbox");
-                newListItem.appendChild(checkbox);
-
                 // 3. Add the list item to the list.
                 list.appendChild(newListItem);
                     
@@ -86,6 +78,13 @@
                 // Reset Focus To Input After Adding
                 input.focus();
 
+                // Add checkbox to Active To-Dos item.
+                // Citation: w3schools.com
+                // Link: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_create
+                checkbox = document.createElement("input");
+                checkbox.setAttribute("type", "checkbox");
+                newListItem.appendChild(checkbox);
+
                 // Input Date and Time.
                 // Citation: phonixnap.com
                 // Link: https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
@@ -93,14 +92,14 @@
                 span2 = document.createElement("SPAN2");
                 txt2 = document.createTextNode((today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
 
+                // Button complete text and function.
                 span = document.createElement("SPAN");
                 txt = document.createTextNode("Complete");
-                // Button co // Add Date.
                 span.className = "complete";
                 
+                // Button delete text and function.
                 span1 = document.createElement("SPAN1");
                 txt1 = document.createTextNode("Delete");
-                // Button delete icon.
                 span1.className = "close";
 
                 // Date-time displayed.
@@ -110,11 +109,13 @@
                 // Display button complete on active to-do list
                 span.appendChild(txt);
                 newListItem.appendChild(span);
-                //Display button delete on active to-do list
+                // Display button delete on active to-do list
                 span1.appendChild(txt1);
                 newListItem.appendChild(span1);
 
                 // Button delete function.
+                // Citation: How To Create a To Do List - W3Schools
+                // Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
                 for (i = 0; i < close.length; i++) {
                     close[i].onclick = function () {
                         div = this.parentElement;
@@ -123,15 +124,13 @@
                 }
 
                 // Button complete function.
+                // Citation: How To Create a To Do List - W3Schools
+                // Link: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_todo
                 for (i = 0; i < complete.length; i++) {
                     complete[i].onclick = function () 
                     {
                         // Button complete function.
                         sectionorigin = this.parentElement;  
-                        
-                        // Button complete function.
-                        asidelistItem = document.createElement("li");
-                            
                         // Button complete press to move list to complete to-do list.
                         asidelist.appendChild(sectionorigin);        
                     }

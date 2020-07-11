@@ -1,5 +1,5 @@
-/* Citation: line 3 to 72 are taken from James Grieve in class "js practice - Shopping List" example. Link: https://github.com/TECHCareers-by-Manpower/js-practice*/
-
+/* Citation: line 3 to 60 are taken from James Grieve in class "js practice - Shopping List" example.
+   Link: https://github.com/TECHCareers-by-Manpower/js-practice*/
 * {
     box-sizing: border-box;
 }
@@ -14,31 +14,16 @@ body {
     min-width: 400px;
     max-width: 1200px;
 }
-
 h1 {
     font-size: 35px;
     font-weight: bolder;
     margin: 16px 0 ;
 }
-
 h2 {
     font-size: 25px;
     font-weight: bolder;
     margin: 16px 0 ;
 }
-
-h3 {
-    font-size: 25px;
-    font-weight: bolder;
-    margin: 16px 0 ;
-}
-
-h4 {
-    font-size: 25px;
-    font-weight: bolder;
-    margin: 16px 0 ;
-}
-
 a {
     color: white;
     background-color: rgb(0, 151, 20);
@@ -70,3 +55,21 @@ ul li {
     color: firebrick;
     font-weight: bold;
 }
+.complete {
+    color: white;
+    background-color: rgb(0, 151, 20);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 6px;
+    text-decoration: none;
+  }
+  .close {
+    color: white;
+    background-color: rgb(0, 151, 20);
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 6px;
+    text-decoration: none;
+  }

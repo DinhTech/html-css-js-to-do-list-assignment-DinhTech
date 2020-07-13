@@ -37,7 +37,7 @@ h2 {
     border-radius: 12px;
     padding: 20px; 
 }
-a {
+ab {
     color: #555;
     background-color: rgb(255, 170, 50);
     font-weight: bold;
@@ -51,7 +51,7 @@ a {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
-a:hover {
+ab:hover {
     background-color: rgb(110, 180, 110);
     color: black;
 }
@@ -74,6 +74,13 @@ ul {
     list-style: square;
     padding: 0 20px;
 }
+li {
+    margin: 10px 0;
+    padding: 10px 0;
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+}
 ul li {
     margin: 5px 0;
 }
@@ -88,11 +95,10 @@ ul li {
     background-color: rgb(255, 170, 50);
     font-weight: bold;
     font-size: 17px;
-    padding: 6px;
+    padding: 10px;
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin: 10px;
   }
 .complete:hover {
     background-color: rgb(110, 180, 110);
@@ -103,11 +109,10 @@ ul li {
     background-color: rgb(255, 170, 50);
     font-weight: bold;
     font-size: 17px;
-    padding: 6px;
+    padding: 10px;
     text-decoration: none;
     cursor: pointer;
     border-radius: 10px;
-    margin: 10px;
 }
 .close:hover {
     background-color: rgb(110, 180, 110);
@@ -115,8 +120,9 @@ ul li {
 }
 footer p {
     font-size: 20px;
+    color: #555;
     text-align: center;
-    border-top:3px solid rgb(0, 0, 0) ;
+    border-top:3px solid #555;
     margin-top: 20px;
     padding-top: 10px;
 }

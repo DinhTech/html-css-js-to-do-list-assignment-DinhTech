@@ -7,7 +7,7 @@
     // <input type="text">
     const input = document.querySelector("input");
     // <a href="#">Add Item</a>
-    const addButton = document.querySelector("a");
+    const addButton = document.querySelector("ab");
     // <ul class="empty">
     const list = document.querySelector("section>ul");
     // <p id="error-output"></p>
@@ -19,7 +19,7 @@
     close = document.getElementsByClassName("close");
    
     // Button complete function to bring date to completed to-do list.
-    const asidelist = document.querySelector("aside>ul");   
+    const list1 = document.querySelector("section1>ul");   
     
     // Button complete function to bring item to completed to-do list.
     complete = document.getElementsByClassName("complete");
@@ -81,37 +81,40 @@
                 // Add checkbox to Active To-Dos item.
                 // Citation: w3schools.com
                 // Link: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_checkbox_create
-                checkbox = document.createElement("input");
+                /*checkbox = document.createElement("input");
                 checkbox.setAttribute("type", "checkbox");
-                newListItem.appendChild(checkbox);
+                newListItem.appendChild(checkbox);*/
 
                 // Input Date and Time.
                 // Citation: phonixnap.com
                 // Link: https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
                 const today=new Date();
-                span2 = document.createElement("SPAN2");
-                txt2 = document.createTextNode((today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
+                dateTime = document.createElement("DATETIME");
+                textDateTime = document.createTextNode((today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
 
                 // Button complete text and function.
-                span = document.createElement("SPAN");
-                txt = document.createTextNode("Complete");
-                span.className = "complete";
+                // Citation: Pure JavaScript To-do List - CodePen
+                // https://codepen.io/franklynroth/pen/ZYeaBd
+                buttonComplete = document.createElement("BUTTONCOMPLETE");
+                textComplete = document.createTextNode("Complete");
+                buttonComplete.className = "complete";
                 
                 // Button delete text and function.
-                span1 = document.createElement("SPAN1");
-                txt1 = document.createTextNode("Delete");
-                span1.className = "close";
+                buttonDelete = document.createElement("BUTTONDELETE");
+                textDelete = document.createTextNode("Delete");
+                buttonDelete.className = "close";
 
                 // Date-time displayed.
-                span2.appendChild(txt2);
-                newListItem.appendChild(span2);
+                dateTime.appendChild(textDateTime);
+                newListItem.appendChild(dateTime);
 
-                // Display button complete on active to-do list
-                span.appendChild(txt);
-                newListItem.appendChild(span);
-                // Display button delete on active to-do list
-                span1.appendChild(txt1);
-                newListItem.appendChild(span1);
+                // Display button complete on active to-do list items.
+                buttonComplete.appendChild(textComplete);
+                newListItem.appendChild(buttonComplete);
+
+                // Display button delete on active to-do list items.
+                buttonDelete.appendChild(textDelete);
+                newListItem.appendChild(buttonDelete);
 
                 // Button delete function.
                 // Citation: How To Create a To Do List - W3Schools
@@ -131,8 +134,15 @@
                     {
                         // Button complete function.
                         sectionorigin = this.parentElement;  
+
+                        // Button complete function.
+                        list1Item = document.createElement("li");
+
+                        // Remove button complete in complete to-do items.
+                        list1Item.innerText = sectionorigin.children[1].remove();
+
                         // Button complete press to move list to complete to-do list.
-                        asidelist.appendChild(sectionorigin);        
+                        list1.appendChild(sectionorigin);        
                     }
                 }
             }

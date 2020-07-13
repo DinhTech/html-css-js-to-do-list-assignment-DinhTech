@@ -90,7 +90,7 @@
                 // Link: https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
                 const today=new Date();
                 dateTime = document.createElement("DATETIME");
-                textDateTime = document.createTextNode((today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
+                textDateTime = document.createTextNode("Start: " + (today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
 
                 // Button complete text and function.
                 // Citation: Pure JavaScript To-do List - CodePen
@@ -104,7 +104,7 @@
                 textDelete = document.createTextNode("Delete");
                 buttonDelete.className = "close";
 
-                // Date-time displayed.
+                // Display Date-time.
                 dateTime.appendChild(textDateTime);
                 newListItem.appendChild(dateTime);
 
@@ -142,7 +142,16 @@
                         list1Item.innerText = sectionorigin.children[1].remove();
 
                         // Button complete press to move list to complete to-do list.
-                        list1.appendChild(sectionorigin);        
+                        list1.appendChild(sectionorigin); 
+                        
+                        // Display end date and time. 
+                        // Citation: phonixnap.com
+                        // Link: https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
+                        dateTimeEnd = document.createElement("DATETIMEEND");
+                        const today = new Date();
+                        textDateTimeEnd = document.createTextNode("End: " + (today.getMonth()+1)+'-'+today.getDate()+' '+today.getFullYear()+'-'+today.getHours()+ ':' +today.getMinutes()+ ':' +today.getSeconds());
+                        dateTimeEnd.appendChild(textDateTimeEnd);
+                        sectionorigin.appendChild(dateTimeEnd);
                     }
                 }
             }

@@ -54,6 +54,8 @@ ab {
 ab:hover {
     background-color: rgb(110, 180, 110);
     color: black;
+    border: 2px solid rgb(255, 170, 50);
+    padding: 8px;
 }
 input {
     margin: 0;
@@ -104,6 +106,8 @@ ul li {
 .complete:hover {
     background-color: rgb(110, 180, 110);
     color: black;
+    border: 2px solid rgb(255, 170, 50);
+    padding: 8px;
 }
   .close {
     color: #555;
@@ -118,6 +122,8 @@ ul li {
 .close:hover {
     background-color: rgb(110, 180, 110);
     color: black;
+    border: 2px solid rgb(255, 170, 50);
+    padding: 8px;
 }
 footer p {
     font-size: 20px;
